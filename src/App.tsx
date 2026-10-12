@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import VideoCall from './VideoCall';
+import DocumentChamber from './DocumentChamber';
 
 function App() {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
@@ -17,6 +19,10 @@ function App() {
       <p style={{ marginTop: '15px' }}>
         <strong>Selected Date:</strong> {selectedDate.toDateString()}
       </p>
+      {/* Video Call Component */}
+      <VideoCall />
+      {/* Document Processing Chamber */}
+      <DocumentChamber />
     </div>
   );
 }
